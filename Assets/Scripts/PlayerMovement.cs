@@ -72,4 +72,10 @@ public class PlayerMovement : MonoBehaviour {
         Vector2 position = transform.position;
         return Physics2D.OverlapCircle(position + Vector2.down * 0.5f,GROUND_CHECK_DISTANCE,solidsMask);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.CompareTag("Trap")) {
+            Debug.Log("Dead lol");
+        }
+    }
 }
