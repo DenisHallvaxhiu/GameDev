@@ -24,6 +24,21 @@ public class PlayerMovement : MonoBehaviour {
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
+    private void OnEnable() {
+        if(GameInput.Instance != null) {
+            GameInput.Instance.OnJumpStarted += OnJumpStarted;
+            GameInput.Instance.OnJumpCanceled += OnJumpCanceled;
+        }
+    }
+
+    private void OnDisable() {
+        if(GameInput.Instance != null) {
+            GameInput.Instance.OnJumpStarted -= OnJumpStarted;
+            GameInput.Instance.OnJumpCanceled -= OnJumpCanceled;
+        }
+        canJump = false;
+    }
+
     private void Start() {
         //Calls Events 
         GameInput.Instance.OnJumpStarted += OnJumpStarted;
@@ -73,9 +88,4 @@ public class PlayerMovement : MonoBehaviour {
         return Physics2D.OverlapCircle(position + Vector2.down * 0.5f,GROUND_CHECK_DISTANCE,solidsMask);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Trap")) {
-            Debug.Log("Dead lol");
-        }
-    }
 }

@@ -13,16 +13,34 @@ public class GameInput : MonoBehaviour {
 
 
     private void Awake() {
+        if(Instance != null && Instance != this) {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
 
         playerInputActions = new PlayerInputActions();
+    }
+
+    private void OnEnable() {
+        if(playerInputActions == null) playerInputActions = new PlayerInputActions();
+
         playerInputActions.Player.Enable();
-
-
         playerInputActions.Player.Jump.started += Jump_started;
         playerInputActions.Player.Jump.canceled += Jump_canceled;
     }
 
+    private void OnDisable() {
+        if(playerInputActions != null) {
+            playerInputActions.Player.Jump.started -= Jump_started;
+            playerInputActions.Player.Jump.canceled -= Jump_canceled;
+            playerInputActions.Player.Disable();
+        }
+    }
+
+    private void OnDestroy() {
+        if(Instance == this) Instance = null;
+    }
     private void Jump_started(InputAction.CallbackContext context) {
         OnJumpStarted?.Invoke(this,EventArgs.Empty);
     }

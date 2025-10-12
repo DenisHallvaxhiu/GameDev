@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 1012695461}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 1695739305}
   m_Layer: 0
   m_Name: PlayerVisual
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,6 +910,10 @@ PrefabInstance:
     - target: {fileID: 2861262864646355425, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
       propertyPath: m_Name
       value: SpikeTrap (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765382031811345710, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
+      propertyPath: reloadDelay
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4866193044263878106, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
       propertyPath: m_LocalPosition.x
