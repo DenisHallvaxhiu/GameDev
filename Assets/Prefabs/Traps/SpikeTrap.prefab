@@ -407,13 +407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7edf2954396e1dc41b458e065a2493c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapProximityRadius
-  detectionRadius: 1
+  detectionRadius: 2
   detectionOffset: {x: 0.03, y: 0.21}
   playerMask:
     serializedVersion: 2
     m_Bits: 256
-  wakeTrigger: Wake
-  nearBool: PlayerNear
 --- !u!1 &4225746675377472583
 GameObject:
   m_ObjectHideFlags: 0

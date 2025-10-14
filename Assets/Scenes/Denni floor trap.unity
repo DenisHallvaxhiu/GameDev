@@ -747,7 +747,6 @@ MonoBehaviour:
   moveSpeed: 4
   jumpForce: 7
   fallMultiplier: 1.5
-  lowJumpMultiplier: 2
   maxJumpTime: 0.35
 --- !u!4 &1012695464
 Transform:
@@ -913,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2861262864646355425, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765382031811345710, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
       propertyPath: reloadDelay
@@ -921,7 +920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4700940413439605030, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4866193044263878106, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
       propertyPath: m_LocalPosition.x

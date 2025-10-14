@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float jumpForce = 7f;
     [SerializeField] private float fallMultiplier = 1.5f;
-    [SerializeField] private float lowJumpMultiplier = 2f;
     [SerializeField] private float maxJumpTime = .35f;
 
 

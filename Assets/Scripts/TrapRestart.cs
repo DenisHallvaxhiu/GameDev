@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class TrapRestart : MonoBehaviour {
 
-    [SerializeField] float reloadDelay = 0.5f; // Gotta add some kind of reload screen or sfx maybe idk
+    [SerializeField] float reloadDelay = 0.5f;
     bool reloading;
 
 
