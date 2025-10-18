@@ -63,6 +63,5 @@ public class DoorLevelExit : MonoBehaviour {
         // Loads the next scene; if current is last, wraps to 0 (optional).
         int next = (current + 1 < count) ? current + 1 : 0;
         SceneManager.LoadScene(next);
-        Debug.Log(next);
     }
 }

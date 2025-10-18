@@ -1,1 +1,1 @@
-using UnityEngine;public class VoidRestart : MonoBehaviour {	void Update() {		if(transform.position.y < -6f) {			Debug.Log("Void");		}	}}
+using UnityEngine;public class VoidRestart : MonoBehaviour {	const float reloadTime = .1f;	void Update() {		if(transform.position.y < -6f) {			ReloadScene.Instance.Reload(reloadTime);		}	}}
