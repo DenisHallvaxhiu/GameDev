@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Start() {
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         //Calls Events 
         GameInput.Instance.OnJumpStarted += OnJumpStarted;
         GameInput.Instance.OnJumpCanceled += OnJumpCanceled;

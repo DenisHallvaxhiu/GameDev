@@ -33,8 +33,12 @@ public class DoorLevelExit : MonoBehaviour {
     //    if(mode == EnterMode.PressToEnter && other.CompareTag(playerTag))
     //        canEnter = false;
     //}
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(mode == EnterMode.OnCollision && collision.CompareTag(playerTag))
+            TryEnter();
 
-    void OnCollisionEnter2D(Collision2D col) {
+    }
+    void On(Collision2D col) {
         if(mode == EnterMode.OnCollision && col.collider.CompareTag(playerTag))
             TryEnter();
     }
