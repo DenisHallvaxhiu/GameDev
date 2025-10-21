@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour {
 
     const float GROUND_CHECK_DISTANCE = 0.2f;
+    const string ANIMATOR_IS_RUNNING = "isRunning";
 
     [SerializeField] private LayerMask solidsMask;
     [SerializeField] private float moveSpeed = 4f;
@@ -11,12 +13,15 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float fallMultiplier = 1.5f;
     [SerializeField] private float maxJumpTime = .35f;
 
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform playerVisual;
 
 
     private Rigidbody2D rb;
     private bool canJump;
     private float jumpTimeCounter;
-
+    private float scaleX = 9f;
+    private float facing = 1f;
 
 
     private void Awake() {
@@ -77,11 +82,28 @@ public class PlayerMovement : MonoBehaviour {
         else if(rb.linearVelocity.y > 0 && !canJump) {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * Time.deltaTime;
         }
+
     }
 
     void FixedUpdate() {
         float moveInput = GameInput.Instance.GetMovementInput();
+
         rb.linearVelocity = new Vector2(moveInput * moveSpeed,rb.linearVelocity.y);
+
+        if(moveInput != 0f) {
+            animator.SetBool(ANIMATOR_IS_RUNNING,true);
+        }
+        else {
+            animator.SetBool(ANIMATOR_IS_RUNNING,false);
+        }
+
+        //Swithces left and right 
+        var side = playerVisual.localScale;
+
+        if(Mathf.Abs(moveInput) > 0.01f) facing = moveInput > 0 ? 1f : -1f;
+        side.x = scaleX * facing;
+        playerVisual.localScale = side;
+
     }
     public bool IsGrounded() {
         Vector2 position = transform.position;
