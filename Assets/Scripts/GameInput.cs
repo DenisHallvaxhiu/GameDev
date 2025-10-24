@@ -53,4 +53,8 @@ public class GameInput : MonoBehaviour {
         float inputVector = playerInputActions.Player.Move.ReadValue<float>();
         return inputVector;
     }
+
+    public void StopMovement() {
+        playerInputActions.Player.Disable();
+    }
 }
