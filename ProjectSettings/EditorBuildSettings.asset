@@ -10,10 +10,12 @@ EditorBuildSettings:
       Wall.unity
     guid: c7f46a3062c9c1d4a85b4edf6a2102a4
   - enabled: 1
-    path: Assets/Scenes/Denis Ghost Platform.unity
+    path: Assets/Scenes/Tests [TO BE REMOVED AFTER GAME FINISHES]/Denni Tests/Denis
+      Ghost Platform.unity
     guid: 18295e00623b90c458d5ce6c2f504a5e
   - enabled: 1
-    path: Assets/Scenes/Denni floor trap.unity
+    path: Assets/Scenes/Tests [TO BE REMOVED AFTER GAME FINISHES]/Denni Tests/Denni
+      floor trap.unity
     guid: f6b90e304e9dbba4e9e31ca85e31143c
   - enabled: 1
     path: Assets/Scenes/Tests [TO BE REMOVED AFTER GAME FINISHES]/Denni Tests/Denni

@@ -15,12 +15,15 @@ public class ReloadScene : MonoBehaviour {
     }
 
     private IEnumerator ReloadCoroutine(float reloadDelay) {
-        yield return new WaitForSeconds(reloadDelay);
+        yield return new WaitForSecondsRealtime(reloadDelay);
         var scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex);
+        Time.timeScale = 1f;
     }
 
-    public void Reload(float reloadDelay = 0.5f) {
+    public void Reload(float reloadDelay = 1f) {
+        //GameInput.Instance.StopMovement();
+        Time.timeScale = 0f;
         StartCoroutine(ReloadCoroutine(reloadDelay));
     }
 
