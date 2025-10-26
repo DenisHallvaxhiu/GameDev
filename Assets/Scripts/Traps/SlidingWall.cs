@@ -6,9 +6,9 @@ public class SlidingWall : MonoBehaviour {
     [SerializeField] private Transform transformFrom;
     [SerializeField] private Transform transformTo;
 
+    [SerializeField] private bool backAndForth = false;
     private float moveTime = 1.5f;
     private float awaitAtEnds = .2f;
-    private bool backAndForth = false;
     private AnimationCurve ease = AnimationCurve.EaseInOut(0,0,1,1);
 
     private bool startOnPlayerProximity = true;

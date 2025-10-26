@@ -9,6 +9,8 @@ public class SpinningBlade : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        ReloadScene.Instance.Reload();
+        if(collision.gameObject.tag == "Player") {
+            ReloadScene.Instance.Reload();
+        }
     }
 }
