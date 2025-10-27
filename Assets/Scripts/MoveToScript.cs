@@ -1,51 +1,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SawTrapSimple : MonoBehaviour {
+public class MoveToScript : MonoBehaviour {
     [Header("Path")]
-    [Tooltip("If true, path loops from last point back to first. If false, path ping-pongs (YoYo).")]
+    //if true it loops, if false it goes backwards
     [SerializeField] private bool closedLoop = false;
 
-    [Tooltip("World-space points for the path. Needs at least 2.")]
-    [SerializeField] private Vector2[] sawPoints;
+    //Path of the moving object (needs at least 2)
+    [SerializeField] private Vector2[] trajectoryPoints;
 
-    [Tooltip("Movement speed in world units per second.")]
+    //Speed of movement
     [SerializeField] private float unitsPerSecond = 3f;
 
-    [Tooltip("Pause time (seconds) at each end when NOT closedLoop.")]
+    //Pause at edges (last and first) 
     [SerializeField] private float pauseAtEnds = 0f;
 
-    [Header("Visuals (optional)")]
-    [SerializeField] private GameObject sawPrefab;
-    [SerializeField] private GameObject chainPoint;   // little sprite to show chain segments
-    [SerializeField] private bool chainVisible = false;
-    [SerializeField] private float chainSpacing = 0.5f;
+
+    [SerializeField] private GameObject movingObjectPrefab;
+    // little sprite to show trajectory segments
+    [SerializeField] private GameObject trajectoryPoint;
+    [SerializeField] private bool trajectoryVisible = false;
+    [SerializeField] private float trajectorySpacing = 0.5f;
     [SerializeField] private bool spriteToTheFront = false;
 
-    [Header("Runtime")]
-    [SerializeField] private float snapEpsilon = 0.001f;
+    private float snapEpsilon = 0.001f;
 
     // spawned blade + cached rb
-    private GameObject sawBlade;
-    private Rigidbody2D sawRB;
+    private GameObject movingObject;
+    private Rigidbody2D rb;
 
-    // path/segment state
+    // trajectory state
     private List<Vector2> path = new List<Vector2>();
     private int segStartIndex = 0; // index into path for start of current segment
-    private int dir = +1;          // +1 forward, -1 backward (for YoYo)
+    private int dir = +1;          // +1 forward, -1 backward 
     private float pauseTimer = 0f; // >0 means currently paused
 
     private void Start() {
-        if(sawPoints == null || sawPoints.Length < 2) {
-            Debug.LogWarning("[SawTrapSimple] Provide at least 2 sawPoints.");
-            enabled = false;
+        if(trajectoryPoints == null || trajectoryPoints.Length < 2) {
+            Debug.LogWarning("[SawTrapSimple] Provide at least 2 trajectoryPoints.");
             return;
         }
 
         BuildPath();
-        if(chainVisible && chainPoint != null) BuildChain();
+        if(trajectoryVisible && trajectoryPoint != null) BuildTrajectory();
 
-        CreateSawBlade();
+        CreateMainObject();
 
         // place exactly on first point
         SetPosition(path[0],snap: true);
@@ -55,7 +54,7 @@ public class SawTrapSimple : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if(sawBlade == null) return;
+        if(movingObject == null) return;
         if(unitsPerSecond <= 0f) return;
 
         // handle optional pause at ends (only for open YoYo)
@@ -99,87 +98,82 @@ public class SawTrapSimple : MonoBehaviour {
         }
     }
 
-    // --- helpers ---
-
     private void BuildPath() {
         path.Clear();
-        path.AddRange(sawPoints);
-
-        // For closed loop, we conceptually connect last -> first; we won't duplicate the first point here.
-        // For open path, we’ll YoYo by flipping 'dir' at ends.
+        path.AddRange(trajectoryPoints);
     }
 
-    private void BuildChain() {
-        // draw chain along each consecutive pair
-        for(int i = 0;i < sawPoints.Length - 1;i++) {
-            SpawnChainBetween(sawPoints[i],sawPoints[i + 1]);
+    private void BuildTrajectory() {
+        // draw trajectory along each consecutive pair
+        for(int i = 0;i < trajectoryPoints.Length - 1;i++) {
+            SpawnTrajectoryBetween(trajectoryPoints[i],trajectoryPoints[i + 1]);
         }
-        if(closedLoop && sawPoints.Length >= 2) {
-            SpawnChainBetween(sawPoints[sawPoints.Length - 1],sawPoints[0]);
+        if(closedLoop && trajectoryPoints.Length >= 2) {
+            SpawnTrajectoryBetween(trajectoryPoints[trajectoryPoints.Length - 1],trajectoryPoints[0]);
         }
     }
 
-    private void SpawnChainBetween(Vector2 a,Vector2 b) {
+    private void SpawnTrajectoryBetween(Vector2 a,Vector2 b) {
         float segLen = Vector2.Distance(a,b);
         if(segLen <= 0f) return;
 
-        float spacing = Mathf.Max(0.01f,chainSpacing);
+        float spacing = Mathf.Max(0.01f,trajectorySpacing);
         int count = Mathf.Max(1,Mathf.FloorToInt(segLen / spacing));
         Vector2 dir = (b - a).normalized;
         float step = segLen / count;
 
         for(int c = 0;c <= count;c++) {
             Vector2 p = a + dir * (c * step);
-            Instantiate(chainPoint,p,Quaternion.identity,this.transform);
+            Instantiate(trajectoryPoint,p,Quaternion.identity,this.transform);
         }
     }
 
-    private void CreateSawBlade() {
+    private void CreateMainObject() {
         Vector2 startPos = path[0];
-        sawBlade = (sawPrefab != null)
-            ? Instantiate(sawPrefab,startPos,Quaternion.identity,this.transform)
-            : new GameObject("SawBlade");
+        movingObject = (movingObjectPrefab != null)
+            ? Instantiate(movingObjectPrefab,startPos,Quaternion.identity,this.transform)
+            : new GameObject("GameObject");
 
-        sawRB = sawBlade.GetComponent<Rigidbody2D>();
-        if(sawRB != null) {
-            // For smooth scripted motion, use Kinematic
-            sawRB.bodyType = RigidbodyType2D.Kinematic;
-            sawRB.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rb = movingObject.GetComponent<Rigidbody2D>();
+        if(rb != null) {
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
 
         if(spriteToTheFront) {
-            var sr = sawBlade.GetComponent<SpriteRenderer>();
+            var sr = movingObject.GetComponent<SpriteRenderer>();
             if(sr != null) sr.sortingOrder = 999;
         }
     }
 
     private bool AdvanceSegment() {
-        // Decide next segment based on closed/open
         if(closedLoop) {
             segStartIndex = (segStartIndex + 1) % path.Count;
             return true;
         }
         else {
-            // open path, ping-pong
             if(dir > 0) {
+                // moving forward
                 if(NextIndex(segStartIndex) == path.Count - 1) {
-                    // reached last point; flip direction
+                    // we just snapped to LAST point — make it the new start, then flip
+                    segStartIndex = path.Count - 1;               // ★ crucial
                     if(pauseAtEnds > 0f) pauseTimer = pauseAtEnds;
                     dir = -1;
                 }
                 else {
-                    segStartIndex += 1;
+                    segStartIndex += 1;                            // normal advance
                 }
             }
-            else // dir < 0
-            {
+            else {
+                // moving backward
                 if(segStartIndex == 0) {
-                    // reached first point; flip direction
+                    // we just snapped to FIRST point — make it the new start, then flip
+                    segStartIndex = 0;                             // ★ crucial
                     if(pauseAtEnds > 0f) pauseTimer = pauseAtEnds;
                     dir = +1;
                 }
                 else {
-                    segStartIndex -= 1;
+                    segStartIndex -= 1;                            // normal advance
                 }
             }
             return true;
@@ -199,31 +193,31 @@ public class SawTrapSimple : MonoBehaviour {
     }
 
     private Vector2 GetPosition() {
-        if(sawRB != null) return sawRB.position;
-        return sawBlade.transform.position;
+        if(rb != null) return rb.position;
+        return movingObject.transform.position;
     }
 
     private void SetPosition(Vector2 pos,bool snap) {
-        if(sawRB != null) {
-            if(snap) sawRB.position = pos;
-            else sawRB.MovePosition(pos);
+        if(rb != null) {
+            if(snap) rb.position = pos;
+            else rb.MovePosition(pos);
         }
         else {
-            sawBlade.transform.position = pos;
+            movingObject.transform.position = pos;
         }
     }
 
     private void OnDrawGizmos() {
-        if(sawPoints == null || sawPoints.Length == 0) return;
+        if(trajectoryPoints == null || trajectoryPoints.Length == 0) return;
 
         Gizmos.color = Color.yellow;
-        for(int i = 0;i < sawPoints.Length;i++) {
-            Gizmos.DrawSphere(sawPoints[i],0.12f);
-            if(i < sawPoints.Length - 1)
-                Gizmos.DrawLine(sawPoints[i],sawPoints[i + 1]);
+        for(int i = 0;i < trajectoryPoints.Length;i++) {
+            Gizmos.DrawSphere(trajectoryPoints[i],0.12f);
+            if(i < trajectoryPoints.Length - 1)
+                Gizmos.DrawLine(trajectoryPoints[i],trajectoryPoints[i + 1]);
         }
-        if(closedLoop && sawPoints.Length >= 2) {
-            Gizmos.DrawLine(sawPoints[sawPoints.Length - 1],sawPoints[0]);
+        if(closedLoop && trajectoryPoints.Length >= 2) {
+            Gizmos.DrawLine(trajectoryPoints[trajectoryPoints.Length - 1],trajectoryPoints[0]);
         }
     }
 }

@@ -148,20 +148,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806982538976c45429148d83fc2253c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SawTrapSimple
-  closedLoop: 1
-  sawPoints:
-  - {x: 2, y: 0}
-  - {x: 2, y: 2}
-  - {x: 0, y: 2}
+  closedLoop: 0
+  trajectoryPoints:
+  - {x: 0, y: -1}
+  - {x: 1, y: 0}
+  - {x: 2, y: -2}
+  - {x: 1, y: 1}
   - {x: 0, y: 0}
-  unitsPerSecond: 3
-  pauseAtEnds: 0
-  sawPrefab: {fileID: 730663754469957585, guid: bc3ddb7c2f61d7f4184f9e7e48207bfb, type: 3}
-  chainPoint: {fileID: 0}
-  chainVisible: 0
-  chainSpacing: 0.5
+  unitsPerSecond: 5
+  pauseAtEnds: 2
+  movingObjectPrefab: {fileID: 730663754469957585, guid: bc3ddb7c2f61d7f4184f9e7e48207bfb, type: 3}
+  trajectoryPoint: {fileID: 626152506}
+  trajectoryVisible: 1
+  trajectorySpacing: 0
   spriteToTheFront: 0
-  snapEpsilon: 0.001
 --- !u!4 &84519202
 Transform:
   m_ObjectHideFlags: 0
@@ -558,6 +558,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &626152506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2247404321343956764, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+  m_PrefabInstance: {fileID: 2918688282057542674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &947351809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1223,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beccf20e606cfda4b9c9427f7aa05764, type: 3}
+--- !u!1001 &2918688282057542674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.1805
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1793
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359409705908034489, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247404321343956764, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
+      propertyPath: m_Name
+      value: Circle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db379a03cbc36544798d4c4d90d8fcb0, type: 3}
 --- !u!1001 &4132022253878855466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1291,3 +1353,4 @@ SceneRoots:
   - {fileID: 1904766419}
   - {fileID: 1156591326}
   - {fileID: 84519202}
+  - {fileID: 2918688282057542674}
