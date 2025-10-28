@@ -1,0 +1,1729 @@
+fileFormatVersion: 2
+guid: f918045aa8962ca48a830992cac3b0c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6999939906866651835
+    second: Chains_0
+  - first:
+      213: -6968742210135179512
+    second: Chains_1
+  - first:
+      213: -409158306766479926
+    second: Chains_2
+  - first:
+      213: 135041388124408250
+    second: Chains_3
+  - first:
+      213: -1584475541621170845
+    second: Chains_4
+  - first:
+      213: 2786929515476291284
+    second: Chains_5
+  - first:
+      213: -5184034059844512180
+    second: Chains_6
+  - first:
+      213: -1604784978876986225
+    second: Chains_7
+  - first:
+      213: 303985045047758588
+    second: Chains_8
+  - first:
+      213: 2062358358940566295
+    second: Chains_9
+  - first:
+      213: 2664196240207387673
+    second: Chains_10
+  - first:
+      213: 7585023612296876375
+    second: Chains_11
+  - first:
+      213: 7283399725738730601
+    second: Chains_12
+  - first:
+      213: 6716754333051289276
+    second: Chains_13
+  - first:
+      213: -3021757079245292268
+    second: Chains_14
+  - first:
+      213: -1902721521296021945
+    second: Chains_15
+  - first:
+      213: -8261140516522782504
+    second: Chains_16
+  - first:
+      213: -1376836780229561583
+    second: Chains_17
+  - first:
+      213: 7462807983004798975
+    second: Chains_18
+  - first:
+      213: -3557094873958018940
+    second: Chains_19
+  - first:
+      213: -5338525357331783036
+    second: Chains_20
+  - first:
+      213: 8978488281014876970
+    second: Chains_21
+  - first:
+      213: -8459282734410514708
+    second: Chains_22
+  - first:
+      213: -1004718583154803228
+    second: Chains_23
+  - first:
+      213: -3114106261673283845
+    second: Chains_24
+  - first:
+      213: 3835075578873793614
+    second: Chains_25
+  - first:
+      213: 2959073017268520589
+    second: Chains_26
+  - first:
+      213: -278908545855765074
+    second: Chains_27
+  - first:
+      213: -984456110269042249
+    second: Chains_28
+  - first:
+      213: -912549067293300658
+    second: Chains_29
+  - first:
+      213: -8629468366373067233
+    second: Chains_30
+  - first:
+      213: -3837939253655253433
+    second: Chains_31
+  - first:
+      213: -8837459056128644147
+    second: Chains_32
+  - first:
+      213: -1993894017396027645
+    second: Chains_33
+  - first:
+      213: 5406039803870576540
+    second: Chains_34
+  - first:
+      213: 4497827311671977284
+    second: Chains_35
+  - first:
+      213: 5711643840296178740
+    second: Chains_36
+  - first:
+      213: -9136817211456767707
+    second: Chains_37
+  - first:
+      213: 9009460927259657025
+    second: Chains_38
+  - first:
+      213: 395197104022238502
+    second: Chains_39
+  - first:
+      213: 1884860230112539787
+    second: Chains_40
+  - first:
+      213: -3761632962027347340
+    second: Chains_41
+  - first:
+      213: -7356902045739582847
+    second: Chains_42
+  - first:
+      213: -8507313150773027635
+    second: Chains_43
+  - first:
+      213: 5615999814748786901
+    second: Chains_44
+  - first:
+      213: -835459402709261458
+    second: Chains_45
+  - first:
+      213: 164318326577040809
+    second: Chains_46
+  - first:
+      213: -7668742460778924875
+    second: Chains_47
+  - first:
+      213: 5129696461134568981
+    second: Chains_48
+  - first:
+      213: 4297654888898062906
+    second: Chains_49
+  - first:
+      213: 8672457593537370733
+    second: Chains_50
+  - first:
+      213: -1515819713818058477
+    second: Chains_51
+  - first:
+      213: -1173547935223604206
+    second: Chains_52
+  - first:
+      213: -467710146642216521
+    second: Chains_53
+  - first:
+      213: -8572684011234867227
+    second: Chains_54
+  - first:
+      213: 81588217443847082
+    second: Chains_55
+  - first:
+      213: -5292727155116229044
+    second: Chains_56
+  - first:
+      213: 2857838043197192610
+    second: Chains_57
+  - first:
+      213: 5979558845034276823
+    second: Chains_58
+  - first:
+      213: -1863037801628190199
+    second: Chains_59
+  - first:
+      213: 2233363575339576711
+    second: Chains_60
+  - first:
+      213: 2540243429235647674
+    second: Chains_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chains_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2654
+        width: 10
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb22edd0248c42160800000000000000
+      internalID: 6999939906866651835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_1
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 2654
+        width: 17
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f3f91c1ed0a4f90800000000000000
+      internalID: -6968742210135179512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_2
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 2655
+        width: 26
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd984410b0625af0800000000000000
+      internalID: -409158306766479926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_3
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 2655
+        width: 35
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab981215d63cfd100800000000000000
+      internalID: 135041388124408250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_4
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 2656
+        width: 44
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d106ac3efc20ae0800000000000000
+      internalID: -1584475541621170845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_5
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 2438
+        width: 53
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de0408e0a92da620800000000000000
+      internalID: 2786929515476291284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_6
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 2440
+        width: 60
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c46117f1d7c9e08b0800000000000000
+      internalID: -5184034059844512180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_7
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 2441
+        width: 68
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c87217098aab9e0800000000000000
+      internalID: -1604784978876986225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_8
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2445
+        width: 75
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe4a13b9c8f73400800000000000000
+      internalID: 303985045047758588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_9
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 2447
+        width: 82
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713c5382008fe9c10800000000000000
+      internalID: 2062358358940566295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2229
+        width: 86
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c1e7d6d5029f420800000000000000
+      internalID: 2664196240207387673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_11
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 2235
+        width: 89
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751d7e7c9ca634960800000000000000
+      internalID: 7585023612296876375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_12
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 2238
+        width: 92
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964a5d12675d31560800000000000000
+      internalID: 7283399725738730601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_13
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2239
+        width: 94
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe7611aa74b63d50800000000000000
+      internalID: 6716754333051289276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_14
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 2239
+        width: 96
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41dff0642ff8016d0800000000000000
+      internalID: -3021757079245292268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_15
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 2018
+        width: 96
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746e8a08bdc2895e0800000000000000
+      internalID: -1902721521296021945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_16
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 2018
+        width: 96
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d0921938788a5d80800000000000000
+      internalID: -8261140516522782504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_17
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 2018
+        width: 94
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11379b04e3e74ece0800000000000000
+      internalID: -1376836780229561583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_18
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 2017
+        width: 92
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff43f52258319760800000000000000
+      internalID: 7462807983004798975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_19
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 2014
+        width: 89
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4809e55fe09a2aec0800000000000000
+      internalID: -3557094873958018940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_20
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1787
+        width: 86
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482e2d3e87fb9e5b0800000000000000
+      internalID: -5338525357331783036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_21
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1784
+        width: 82
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b36e1858ff99c70800000000000000
+      internalID: 8978488281014876970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_22
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1782
+        width: 75
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceebdd81c279a9a80800000000000000
+      internalID: -8459282734410514708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_23
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1778
+        width: 68
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4edf2d795c58e02f0800000000000000
+      internalID: -1004718583154803228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_24
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1777
+        width: 60
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfee420bad878c4d0800000000000000
+      internalID: -3114106261673283845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1554
+        width: 53
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c4c8d7bece83530800000000000000
+      internalID: 3835075578873793614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_26
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1551
+        width: 44
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86cbba3b3db01920800000000000000
+      internalID: 2959073017268520589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_27
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1550
+        width: 35
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5427fb72e112cf0800000000000000
+      internalID: -278908545855765074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_28
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1550
+        width: 26
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1737232628652f0800000000000000
+      internalID: -984456110269042249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_29
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1549
+        width: 17
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e486edb4579f553f0800000000000000
+      internalID: -912549067293300658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1328
+        width: 10
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16ecdddd38fd3880800000000000000
+      internalID: -8629468366373067233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_31
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1328
+        width: 10
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ec9544596ecbac0800000000000000
+      internalID: -3837939253655253433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_32
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1328
+        width: 17
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcba462bfc90b5580800000000000000
+      internalID: -8837459056128644147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_33
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1329
+        width: 26
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f455d84f34454e0800000000000000
+      internalID: -1993894017396027645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_34
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1329
+        width: 35
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ff3572f8c160b40800000000000000
+      internalID: 5406039803870576540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_35
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1109
+        width: 44
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44522450c1e7b6e30800000000000000
+      internalID: 4497827311671977284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_36
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1112
+        width: 53
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434d668afc5d34f40800000000000000
+      internalID: 5711643840296178740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_37
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1114
+        width: 60
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529b175b721833180800000000000000
+      internalID: -9136817211456767707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_38
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1115
+        width: 68
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 143c21baaf8080d70800000000000000
+      internalID: 9009460927259657025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_39
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1119
+        width: 75
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62532891ca50c7500800000000000000
+      internalID: 395197104022238502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_40
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 900
+        width: 82
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b847e13946e582a10800000000000000
+      internalID: 1884860230112539787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_41
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 903
+        width: 86
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472a5f240cefbcbc0800000000000000
+      internalID: -3761632962027347340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_42
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 909
+        width: 89
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18af854619807e990800000000000000
+      internalID: -7356902045739582847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_43
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 912
+        width: 92
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc1a2753c3ffe980800000000000000
+      internalID: -8507313150773027635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_44
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 913
+        width: 94
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0d2c0a31a00fd40800000000000000
+      internalID: 5615999814748786901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_45
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 692
+        width: 96
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e632145891ad764f0800000000000000
+      internalID: -835459402709261458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_46
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 692
+        width: 96
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad06bdb5a6c74200800000000000000
+      internalID: 164318326577040809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_47
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 692
+        width: 96
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b43157dc57239590800000000000000
+      internalID: -7668742460778924875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_48
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 692
+        width: 94
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e118bc0c7503740800000000000000
+      internalID: 5129696461134568981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_49
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 691
+        width: 92
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a6dfbf95654ab30800000000000000
+      internalID: 4297654888898062906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_50
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 467
+        width: 89
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a1f609b32ca5870800000000000000
+      internalID: 8672457593537370733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_51
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 461
+        width: 86
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311275e500ab6fae0800000000000000
+      internalID: -1515819713818058477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_52
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 458
+        width: 82
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c9a12ee58b6bfe0800000000000000
+      internalID: -1173547935223604206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_53
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 456
+        width: 75
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b97b83891c5289f0800000000000000
+      internalID: -467710146642216521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_54
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 452
+        width: 68
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7cca2df45b70980800000000000000
+      internalID: -8572684011234867227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_55
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 230
+        width: 60
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab099e2d0cd12100800000000000000
+      internalID: 81588217443847082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_56
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 228
+        width: 53
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ebb3ac1b47c86b0800000000000000
+      internalID: -5292727155116229044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_57
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 225
+        width: 44
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9bd5e0f8419a720800000000000000
+      internalID: 2857838043197192610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_58
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 224
+        width: 35
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d720d7a619abf250800000000000000
+      internalID: 5979558845034276823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_59
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 224
+        width: 26
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ab3de7df82526e0800000000000000
+      internalID: -1863037801628190199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_60
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2
+        width: 17
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d6962c6508efe10800000000000000
+      internalID: 2233363575339576711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chains_61
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 2
+        width: 10
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab46c9aa0f1c04320800000000000000
+      internalID: 2540243429235647674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Chains_0: 6999939906866651835
+      Chains_1: -6968742210135179512
+      Chains_10: 2664196240207387673
+      Chains_11: 7585023612296876375
+      Chains_12: 7283399725738730601
+      Chains_13: 6716754333051289276
+      Chains_14: -3021757079245292268
+      Chains_15: -1902721521296021945
+      Chains_16: -8261140516522782504
+      Chains_17: -1376836780229561583
+      Chains_18: 7462807983004798975
+      Chains_19: -3557094873958018940
+      Chains_2: -409158306766479926
+      Chains_20: -5338525357331783036
+      Chains_21: 8978488281014876970
+      Chains_22: -8459282734410514708
+      Chains_23: -1004718583154803228
+      Chains_24: -3114106261673283845
+      Chains_25: 3835075578873793614
+      Chains_26: 2959073017268520589
+      Chains_27: -278908545855765074
+      Chains_28: -984456110269042249
+      Chains_29: -912549067293300658
+      Chains_3: 135041388124408250
+      Chains_30: -8629468366373067233
+      Chains_31: -3837939253655253433
+      Chains_32: -8837459056128644147
+      Chains_33: -1993894017396027645
+      Chains_34: 5406039803870576540
+      Chains_35: 4497827311671977284
+      Chains_36: 5711643840296178740
+      Chains_37: -9136817211456767707
+      Chains_38: 9009460927259657025
+      Chains_39: 395197104022238502
+      Chains_4: -1584475541621170845
+      Chains_40: 1884860230112539787
+      Chains_41: -3761632962027347340
+      Chains_42: -7356902045739582847
+      Chains_43: -8507313150773027635
+      Chains_44: 5615999814748786901
+      Chains_45: -835459402709261458
+      Chains_46: 164318326577040809
+      Chains_47: -7668742460778924875
+      Chains_48: 5129696461134568981
+      Chains_49: 4297654888898062906
+      Chains_5: 2786929515476291284
+      Chains_50: 8672457593537370733
+      Chains_51: -1515819713818058477
+      Chains_52: -1173547935223604206
+      Chains_53: -467710146642216521
+      Chains_54: -8572684011234867227
+      Chains_55: 81588217443847082
+      Chains_56: -5292727155116229044
+      Chains_57: 2857838043197192610
+      Chains_58: 5979558845034276823
+      Chains_59: -1863037801628190199
+      Chains_6: -5184034059844512180
+      Chains_60: 2233363575339576711
+      Chains_61: 2540243429235647674
+      Chains_7: -1604784978876986225
+      Chains_8: 303985045047758588
+      Chains_9: 2062358358940566295
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

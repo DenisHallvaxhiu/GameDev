@@ -114,6 +114,10 @@ public class MoveToScript : MonoBehaviour {
     }
 
     private void SpawnTrajectoryBetween(Vector2 a,Vector2 b) {
+
+        Debug.Log("a" + a);
+        Debug.Log("b" + b);
+
         float segLen = Vector2.Distance(a,b);
         if(segLen <= 0f) return;
 
@@ -121,10 +125,10 @@ public class MoveToScript : MonoBehaviour {
         int count = Mathf.Max(1,Mathf.FloorToInt(segLen / spacing));
         Vector2 dir = (b - a).normalized;
         float step = segLen / count;
-
+        Quaternion rotation = Quaternion.FromToRotation(Vector3.up,dir);
         for(int c = 0;c <= count;c++) {
-            Vector2 p = a + dir * (c * step);
-            Instantiate(trajectoryPoint,p,Quaternion.identity,this.transform);
+            Vector2 position = a + dir * (c * step);
+            Instantiate(trajectoryPoint,position,rotation,this.transform);
         }
     }
 
