@@ -9,6 +9,9 @@ public class MoveToScript : MonoBehaviour {
     //Path of the moving object (needs at least 2)
     [SerializeField] private Vector2[] trajectoryPoints;
 
+    //Allows the Prefab to go back and forth
+    [SerializeField] private bool backAndForth = false;
+
     //Speed of movement
     [SerializeField] private float unitsPerSecond = 3f;
 
@@ -21,7 +24,6 @@ public class MoveToScript : MonoBehaviour {
     [SerializeField] private GameObject trajectoryPoint;
     [SerializeField] private bool trajectoryVisible = false;
     [SerializeField] private float trajectorySpacing = 0.5f;
-    [SerializeField] private bool spriteToTheFront = false;
 
     private float snapEpsilon = 0.001f;
 
@@ -54,14 +56,15 @@ public class MoveToScript : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+
         if(movingObject == null) return;
         if(unitsPerSecond <= 0f) return;
-
         // handle optional pause at ends (only for open YoYo)
         if(!closedLoop && pauseTimer > 0f) {
             pauseTimer -= Time.fixedDeltaTime;
             return;
         }
+
 
         float distToTravel = unitsPerSecond * Time.fixedDeltaTime;
 
@@ -96,6 +99,7 @@ public class MoveToScript : MonoBehaviour {
                 distToTravel = 0f;
             }
         }
+
     }
 
     private void BuildPath() {
@@ -114,10 +118,6 @@ public class MoveToScript : MonoBehaviour {
     }
 
     private void SpawnTrajectoryBetween(Vector2 a,Vector2 b) {
-
-        Debug.Log("a" + a);
-        Debug.Log("b" + b);
-
         float segLen = Vector2.Distance(a,b);
         if(segLen <= 0f) return;
 
@@ -144,10 +144,6 @@ public class MoveToScript : MonoBehaviour {
             rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
 
-        if(spriteToTheFront) {
-            var sr = movingObject.GetComponent<SpriteRenderer>();
-            if(sr != null) sr.sortingOrder = 999;
-        }
     }
 
     private bool AdvanceSegment() {
