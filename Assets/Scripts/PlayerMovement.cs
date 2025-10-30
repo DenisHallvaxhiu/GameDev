@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     const float GROUND_CHECK_DISTANCE = 0.2f;
     const string ANIMATOR_IS_RUNNING = "isRunning";
 
-    [SerializeField] private LayerMask solidsMask;
+    //[SerializeField] private LayerMask solidsMask;
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float jumpForce = 7f;
     [SerializeField] private float fallMultiplier = 1.5f;
@@ -107,7 +107,8 @@ public class PlayerMovement : MonoBehaviour {
     }
     public bool IsGrounded() {
         Vector2 position = transform.position;
-        return Physics2D.OverlapCircle(position + Vector2.down * 0.5f,GROUND_CHECK_DISTANCE,solidsMask);
+        //return Physics2D.OverlapCircle(position + Vector2.down * 0.5f,GROUND_CHECK_DISTANCE,solidsMask);
+        return Physics2D.OverlapCircle(position + Vector2.down * 0.5f,GROUND_CHECK_DISTANCE);
     }
 
 }

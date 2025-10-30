@@ -5,22 +5,37 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests [TO BE REMOVED AFTER GAME FINISHES]/Denni Tests/Denis
       Wall.unity
     guid: c7f46a3062c9c1d4a85b4edf6a2102a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests [TO BE REMOVED AFTER GAME FINISHES]/Denni Tests/Denis
       Ghost Platform.unity
     guid: 18295e00623b90c458d5ce6c2f504a5e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests [TO BE REMOVED AFTER GAME FINISHES]/Denni Tests/Denni
       floor trap.unity
     guid: f6b90e304e9dbba4e9e31ca85e31143c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests [TO BE REMOVED AFTER GAME FINISHES]/Denni Tests/Denni
       Wall Slide Trap.unity
     guid: 0acac557ddb24464c947f864ffbd5194
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/Level 1.unity
+    guid: 160a68a39e8bfdd44b3e41d518be2fe2
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/Level 2.unity
+    guid: 9335e592458b3764faaf4ee718cd5b1d
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/Level 3.unity
+    guid: 12c0c2170ba49ab4b905d0c5df5abf7a
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/Level 4.unity
+    guid: 85578aabf39f442448830a3eee9c29ec
+  - enabled: 1
+    path: Assets/Scenes/Working Scenes/Level 5.unity
+    guid: b6d2e7c2b73b4814587eef6d0519b8b6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
