@@ -1,114 +1,173 @@
 using System;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour {
-
-    const float GROUND_CHECK_DISTANCE = 0.2f;
     const string ANIMATOR_IS_RUNNING = "isRunning";
 
-    //[SerializeField] private LayerMask solidsMask;
-    [SerializeField] private float moveSpeed = 4f;
-    [SerializeField] private float jumpForce = 7f;
-    [SerializeField] private float fallMultiplier = 1.5f;
-    [SerializeField] private float maxJumpTime = .35f;
+    [Header("Movement")]
+    [SerializeField] float moveSpeed = 4f;
+    [SerializeField] float accel = 50f;
+    [SerializeField] float decel = 60f;
 
-    [SerializeField] private Animator animator;
-    [SerializeField] private Transform playerVisual;
+    [Header("Jump")]
+    [SerializeField] float jumpVelocity = 12f;
+    [SerializeField] float maxJumpHoldTime = 0.25f;
+    [SerializeField] float jumpCutMultiplier = 0.4f;
+    [SerializeField] float coyoteTime = 0.12f;
+    [SerializeField] float jumpBuffer = 0.12f;
 
+    [Header("Gravity")]
+    [SerializeField] float fallMultiplier = 2.0f;
+    [SerializeField] float apexHangMultiplier = 0.75f;
+    [SerializeField] float apexHangVelThreshold = 1.5f;
+    [SerializeField] float maxFallSpeed = -18f;
 
-    private Rigidbody2D rb;
-    private bool canJump;
-    private float jumpTimeCounter;
-    private float scaleX = 9f;
-    private float facing = 1f;
+    [Header("Ground Check")]
+    [SerializeField] LayerMask solidsMask;
+    [SerializeField] Vector2 groundBoxSize = new Vector2(0.6f,0.1f);
+    [SerializeField] Vector2 groundBoxOffset = new Vector2(0f,-0.55f);
+    [SerializeField] bool autoSizeGroundFromCollider = true;
 
+    [Header("Visuals")]
+    [SerializeField] Animator animator;
+    [SerializeField] Transform playerVisual;
+    [SerializeField] float visualScaleX = 9f;
 
-    private void Awake() {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+    Rigidbody2D rb;
+    Collider2D col;
+    float facing = 1f;
+
+    float moveInput;
+    bool jumpPressedThisFrame;
+    bool jumpReleasedThisFrame;
+
+    float lastGroundedTime;
+    float lastJumpPressedTime;
+    float jumpHoldCounter;
+    bool isJumping;
+
+    void Awake() {
+        rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+        if(autoSizeGroundFromCollider && col != null) {
+            var b = col.bounds;
+            // Make a thin box slightly wider than the collider, sitting just under the feet
+            groundBoxSize = new Vector2(b.size.x * 0.9f,0.08f);
+            // Offset to the bottom of the collider
+            groundBoxOffset = new Vector2(0f,(b.min.y - transform.position.y) - 0.02f);
+        }
     }
 
-    private void OnEnable() {
+    void OnEnable() {
         if(GameInput.Instance != null) {
             GameInput.Instance.OnJumpStarted += OnJumpStarted;
             GameInput.Instance.OnJumpCanceled += OnJumpCanceled;
         }
     }
 
-    private void OnDisable() {
+    void OnDisable() {
         if(GameInput.Instance != null) {
             GameInput.Instance.OnJumpStarted -= OnJumpStarted;
             GameInput.Instance.OnJumpCanceled -= OnJumpCanceled;
         }
-        canJump = false;
     }
 
-    private void Start() {
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        //Calls Events 
-        GameInput.Instance.OnJumpStarted += OnJumpStarted;
-        GameInput.Instance.OnJumpCanceled += OnJumpCanceled;
-    }
+    void Update() {
+        // --- INPUT ---
+        moveInput = GameInput.Instance != null ? GameInput.Instance.GetMovementInput() : 0f;
 
-    private void OnJumpStarted(object sender,EventArgs e) {
-        //Checks if its grounded and allows it to jump
-        if(IsGrounded()) {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x,jumpForce);
-            canJump = true;
-            jumpTimeCounter = maxJumpTime;
-        }
-    }
+        // Fallback input so you can test immediately if GameInput events aren’t wired
+        if(Input.GetKeyDown(KeyCode.Space)) OnJumpStarted(null,EventArgs.Empty);
+        if(Input.GetKeyUp(KeyCode.Space)) OnJumpCanceled(null,EventArgs.Empty);
 
-    private void OnJumpCanceled(object sender,EventArgs e) {
-        //When u stop holding the jump button
-        canJump = false;
-    }
-
-
-    private void Update() {
-        // Continue jumping as long as key held and time not exceeded
-        if(canJump && jumpTimeCounter > 0f) {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x,jumpForce);
-            jumpTimeCounter -= Time.deltaTime;
-        }
-        else {
-            canJump = false;
+        // Animator + facing
+        animator?.SetBool(ANIMATOR_IS_RUNNING,Mathf.Abs(moveInput) > 0.01f);
+        if(Mathf.Abs(moveInput) > 0.01f) {
+            facing = moveInput > 0 ? 1f : -1f;
+            if(playerVisual != null) {
+                var s = playerVisual.localScale;
+                s.x = visualScaleX * facing;
+                playerVisual.localScale = s;
+            }
         }
 
-        // Better gravity control
-        if(rb.linearVelocity.y < 0) {
-            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
-        }
-        else if(rb.linearVelocity.y > 0 && !canJump) {
-            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * Time.deltaTime;
-        }
+        // Ground / timers
+        if(IsGrounded()) lastGroundedTime = coyoteTime;
+        else lastGroundedTime -= Time.deltaTime;
 
+        lastJumpPressedTime -= Time.deltaTime;
+
+        if(isJumping) {
+            jumpHoldCounter -= Time.deltaTime;
+            if(jumpHoldCounter <= 0f) isJumping = false;
+        }
     }
 
     void FixedUpdate() {
-        float moveInput = GameInput.Instance.GetMovementInput();
+        // Horizontal smoothing
+        float targetX = moveInput * moveSpeed;
+        float accelRate = Mathf.Abs(targetX) > 0.01f ? accel : decel;
+        Vector2 v = rb.linearVelocity;
+        v.x = Mathf.MoveTowards(v.x,targetX,accelRate * Time.fixedDeltaTime);
 
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed,rb.linearVelocity.y);
-
-        if(moveInput != 0f) {
-            animator.SetBool(ANIMATOR_IS_RUNNING,true);
+        // Start jump if buffered + grounded (coyote)
+        if(lastJumpPressedTime > 0f && lastGroundedTime > 0f) {
+            v.y = jumpVelocity;
+            isJumping = true;
+            jumpHoldCounter = maxJumpHoldTime;
+            lastJumpPressedTime = 0f;
+            lastGroundedTime = 0f;
         }
-        else {
-            animator.SetBool(ANIMATOR_IS_RUNNING,false);
+
+        // Early release = cut jump
+        if(jumpReleasedThisFrame && v.y > 0f) {
+            v.y *= jumpCutMultiplier;
+            isJumping = false;
         }
 
-        //Swithces left and right 
-        var side = playerVisual.localScale;
+        // Gravity shaping
+        float g = Physics2D.gravity.y; // negative
+        float gravityScale = 1f;
 
-        if(Mathf.Abs(moveInput) > 0.01f) facing = moveInput > 0 ? 1f : -1f;
-        side.x = scaleX * facing;
-        playerVisual.localScale = side;
+        if(v.y < 0f) gravityScale = fallMultiplier;
+        else if(Mathf.Abs(v.y) < apexHangVelThreshold) gravityScale = apexHangMultiplier;
 
+        float extraG = (gravityScale - 1f) * g;
+        v.y += extraG * Time.fixedDeltaTime;
+
+        // Clamp terminal speed
+        if(v.y < maxFallSpeed) v.y = maxFallSpeed;
+
+        rb.linearVelocity = v;
+
+        // consume one-frame flags
+        jumpPressedThisFrame = false;
+        jumpReleasedThisFrame = false;
     }
-    public bool IsGrounded() {
-        Vector2 position = transform.position;
-        //return Physics2D.OverlapCircle(position + Vector2.down * 0.5f,GROUND_CHECK_DISTANCE,solidsMask);
-        return Physics2D.OverlapCircle(position + Vector2.down * 0.5f,GROUND_CHECK_DISTANCE);
+
+    void OnJumpStarted(object sender,EventArgs e) {
+        lastJumpPressedTime = jumpBuffer; // buffer it
+        jumpPressedThisFrame = true;
     }
 
+    void OnJumpCanceled(object sender,EventArgs e) {
+        jumpReleasedThisFrame = true;
+    }
+
+    bool IsGrounded() {
+        Vector2 origin = (Vector2)transform.position + groundBoxOffset;
+        RaycastHit2D hit = Physics2D.BoxCast(origin,groundBoxSize,0f,Vector2.down,0f,solidsMask);
+        return hit.collider != null;
+    }
+
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.yellow;
+        Vector2 origin = (Vector2)transform.position + groundBoxOffset;
+        Gizmos.DrawWireCube(origin,groundBoxSize);
+    }
 }
