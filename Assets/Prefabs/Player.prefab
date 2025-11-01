@@ -161,15 +161,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec78cbd35a9dbe540ad302b0e7f08242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 4
+  accel: 50
+  decel: 60
+  jumpVelocity: 12
+  maxJumpHoldTime: 0.25
+  jumpCutMultiplier: 0.5
+  coyoteTime: 0.12
+  jumpBuffer: 0.12
+  fallMultiplier: 1.5
+  apexHangMultiplier: 0.75
+  apexHangVelThreshold: 1.5
+  maxFallSpeed: -18
   solidsMask:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 4
-  jumpForce: 7
-  fallMultiplier: 1.5
-  maxJumpTime: 0.35
+  groundBoxSize: {x: 0.6, y: 0.1}
+  groundBoxOffset: {x: 0, y: -0.55}
+  autoSizeGroundFromCollider: 1
   animator: {fileID: 61001730919279791}
   playerVisual: {fileID: 3529150985991333546}
+  visualScaleX: 9
+  showDebug: 1
 --- !u!61 &80287990496177520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -231,7 +244,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
